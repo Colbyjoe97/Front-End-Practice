@@ -1,4 +1,4 @@
-function test(element) {
+function play() {
     anime({
         targets: '.box',
         translateY: [
