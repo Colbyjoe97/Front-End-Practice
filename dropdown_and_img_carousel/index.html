@@ -15,14 +15,16 @@
 </head>
 
 <body>
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- CAROUSEL IMAGES -->
+    <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <ol class="carousel-indicators">
             <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
             <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="4000">
                 <div class="overlay-image" style="background-image:url(images/soccer-1.jpg)"></div>
                 <div class="container">
                     <h1>Example Headline</h1>
@@ -32,8 +34,8 @@
                     <a href="#" class="btn btn-lg btn-primary">Sign up today</a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="overlay-image" style="background-image:url(images/image1.jpg)"></div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="overlay-image" style="background-image:url(images/soccer-2.jpg)"></div>
                 <div class="container">
                     <h1>Example Headline</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, accusantium quia animi iure
@@ -42,10 +44,10 @@
                     <a href="#" class="btn btn-lg btn-primary">Sign up today</a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="overlay-image" style="background-image:url(images/image1.jpg)"></div>
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="overlay-image" style="background-image:url(images/soccer-3.jpg)"></div>
                 <div class="container">
-                    <h1>Example Headline</h1>
+                    <h1>New Headline</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, accusantium quia animi iure
                         consequatur numquam illo id fugit sed amet enim similique quidem. Magni eum, assumenda aliquam
                         aperiam voluptate rem?</p>
@@ -53,6 +55,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- CAROUSEL NEXT/PREVIOUS BUTTONS -->
         <a href="#myCarousel" class="carousel-control-prev" role="button" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only"></span>
@@ -63,16 +67,34 @@
         </a>
     </div>
 
+    <!-- BANNER -->
+    <div class="banner flexed">
+        <h1>Soccer Camp</h1>
+        <div class="banner-right">
+            <a href="#"><li>Hours</li></a>
+            <a href="#"><li>Locations</li></a>
+            <a href="#"><li>About Us</li></a>
+        </div>
+    </div>
+
+    <!-- WRAPPER -->
+    <div class="wrapper">
+        <h1>test</h1>
+    </div>
 
 
 
 
 
 
+
+
+
+
+    <!-- IMPORTS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
