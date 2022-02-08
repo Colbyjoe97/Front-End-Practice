@@ -45,7 +45,6 @@ body {
     padding: 10px;
     position: sticky;
     top: 0;
-    padding: 0 15%;
 }
 
 .flexed {
@@ -58,7 +57,7 @@ body {
     list-style-type: none;
 } 
 
-a {
+.banner-right a {
     color: white;
     text-decoration: none;
     font-size: large;
@@ -66,13 +65,14 @@ a {
     transition: 0.1s;
 }
 
-a:hover {
+.banner-right a:hover {
     color: lightgreen;
     margin-top: -5px;
     transition: 0.1s;
 }
 
 li{
+    height: 30px;
     margin-right: 20px;
 }
 
@@ -85,14 +85,11 @@ li{
 
 
 
-
-
-
-
-
-
 @media(max-width: 506px) {
     .banner {
         display:none;
+    }
+    .carousel {
+        display: none;
     }
 }
