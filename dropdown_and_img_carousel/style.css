@@ -1,3 +1,6 @@
+body {
+    font-family:sans-serif;
+}
 .wrapper {
     padding-top: 50px;
 }
@@ -8,6 +11,7 @@
     left: 0;
     right: 0;
     padding-bottom: 50px;
+    width: 70%;
 }
 
 .carousel-item {
@@ -28,4 +32,44 @@
     background-position: center;
     background-size: cover;
     opacity: 0.5;
+}
+
+.banner {
+    background-color: #999;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.flexed {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+.banner-right{
+    display: flex;
+    list-style-type: none;
+} 
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 700;
+}
+
+a:hover {
+    color: lightgreen;
+}
+
+li{
+    margin-right: 20px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
 }
