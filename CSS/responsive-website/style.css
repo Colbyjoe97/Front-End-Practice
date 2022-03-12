@@ -1,22 +1,32 @@
 * {
     margin: 0;
     padding: 0;
-    transition: 0.5s;
 }
 body {
-    background-color: lightgray;
+    background-color: gray;
     padding-bottom: 200px;
 }
 .container {
-    width: 80%;
+    width: 70%;
     margin-inline: auto;
     margin-top: 15px;
 }
 .row {
     display: inline-grid;
     grid-template-columns: repeat(3, 33%);
-    gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+}
+.column {
+    background-color: lightgray;
+    border: 1px solid black;
+}
+.column-bottom h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+.column-bottom {
+    padding: 10px;
 }
 /* .row {
     display: flex;
