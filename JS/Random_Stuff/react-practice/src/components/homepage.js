@@ -16,7 +16,7 @@ export default class homepage extends Component {
 	};
 
 	showMore = () => {
-		this.state.show == true ? (
+		this.state.show === true ? (
 			this.setState({ show: false })
 		) : this.setState({show: true})
 	}
@@ -37,7 +37,7 @@ export default class homepage extends Component {
 						Velit, sit suscipit tempora quos quasi, ea aspernatur
 						nesciunt esse sapiente error repudiandae praesentium
 						dolorem, quibusdam vel!
-						{this.state.show == false ? (
+						{this.state.show === false ? (
 							<span>
 								<br />
 								<span className="blue" onClick={this.showMore}>Show More..</span>
