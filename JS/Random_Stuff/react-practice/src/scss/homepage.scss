@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+// INCREMENT
+.increment {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.increment > button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 2px 3px black;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+// SHOW MORE
+.blue {
+    color: blue;
+    font-size: x-small;
+    font-weight: 700;
+    cursor: pointer;
+}
+.show-more {
+    width: 500px;
+    margin: 20px auto;
+}
