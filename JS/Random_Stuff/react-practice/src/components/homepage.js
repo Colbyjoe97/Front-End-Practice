@@ -23,7 +23,6 @@ export default class homepage extends Component {
 	}
 
 	changeBg = (color) => {
-		console.log(color)
 		this.bg_color = color
 		let query = document.querySelector('.wrapper')
 		if(this.bg_color === "rgb(51, 50, 50)") {
