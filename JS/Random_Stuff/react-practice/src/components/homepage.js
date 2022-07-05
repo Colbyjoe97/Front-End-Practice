@@ -33,7 +33,6 @@ export default class homepage extends Component {
 			query.style.backgroundColor = this.bg_color
 			query.style.color = "black";
 		}
-		console.log(query)
 	}
 
 	
