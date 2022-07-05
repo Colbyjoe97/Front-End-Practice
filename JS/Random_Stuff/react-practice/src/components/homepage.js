@@ -7,7 +7,6 @@ export default class homepage extends Component {
 		this.state = {
 			count: 0,
 			show: false,
-			// bg_color: ""
 		};
 	}
 
@@ -23,7 +22,6 @@ export default class homepage extends Component {
 	}
 
 	changeBg = (color) => {
-		// this.bg_color = color
 		let query = document.querySelector('.body')
 		if(color === "rgb(51, 50, 50)") {
 			query.style.backgroundColor = color
@@ -40,8 +38,8 @@ export default class homepage extends Component {
 			<div className="wrapper">
 				{/* INCREMENT NUMBER */}
 				<div className="increment">
-					<button onClick={this.increment}>Click Me!</button>
-					<h1>{this.state.count}</h1>
+					<button onClick={ this.increment }>Click Me!</button>
+					<h1>{ this.state.count }</h1>
 				</div>
 
 				{/* SHOW MORE TEXT BUTTON */}
@@ -54,13 +52,13 @@ export default class homepage extends Component {
 						{this.state.show === false ? (
 							<span>
 								<br />
-								<span className="show" onClick={this.showMore}>Show More..</span>
+								<span className="show" onClick={ this.showMore }>Show More..</span>
 							</span>
 						) : (
 							<span>
 								<br />
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ullam ipsum eveniet ea, voluptas atque minima impedit explicabo possimus quos. Voluptate nihil aliquid consequatur animi? <br />
-								<span className="show" onClick={this.showMore}>Show Less..</span>
+								<span className="show" onClick={ this.showMore }>Show Less..</span>
 							</span>
 						)}
 					</p>
