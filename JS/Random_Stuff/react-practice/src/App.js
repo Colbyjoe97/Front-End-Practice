@@ -4,8 +4,10 @@ import Homepage from './components/homepage'
 
 function App() {
   return (
-    <div className="app">
-      <Homepage />
+    <div className="body">
+      <div className="app">
+        <Homepage />
+      </div>
     </div>
   );
 }
