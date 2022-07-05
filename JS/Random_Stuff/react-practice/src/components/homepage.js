@@ -7,7 +7,7 @@ export default class homepage extends Component {
 		this.state = {
 			count: 0,
 			show: false,
-			bg_color: ""
+			// bg_color: ""
 		};
 	}
 
@@ -23,13 +23,13 @@ export default class homepage extends Component {
 	}
 
 	changeBg = (color) => {
-		this.bg_color = color
-		let query = document.querySelector('.wrapper')
-		if(this.bg_color === "rgb(51, 50, 50)") {
-			query.style.backgroundColor = this.bg_color
+		// this.bg_color = color
+		let query = document.querySelector('.body')
+		if(color === "rgb(51, 50, 50)") {
+			query.style.backgroundColor = color
 			query.style.color = "white";
 		}else {
-			query.style.backgroundColor = this.bg_color
+			query.style.backgroundColor = color
 			query.style.color = "black";
 		}
 	}
