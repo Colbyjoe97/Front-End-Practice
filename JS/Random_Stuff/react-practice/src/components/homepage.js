@@ -21,16 +21,8 @@ export default class homepage extends Component {
 		) : this.setState({show: true})
 	}
 
-	// bg = () => {
-	// 	const [bg, setBg] = useState(1)
-
-	// 	useEffect(() => {
-	// 		setBg(JSON.parse(window.sessionStorage.getItem("bg")))
-	// 	}, [])
-	// }
 
 	changeBg = (color) => {
-		// window.sessionStorage.setItem("bg", color)
 		let query = document.querySelector('.body')
 		if(color === "rgb(51, 50, 50)") {
 			query.style.backgroundColor = color
