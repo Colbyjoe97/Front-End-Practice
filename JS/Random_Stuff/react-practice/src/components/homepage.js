@@ -9,7 +9,7 @@ export default class homepage extends Component {
 			show: false,
 		};
 	}
-
+	// LAPTOP TEST
 	increment = () => {
 		this.setState({ count: (this.state.count += 1) });
 		console.log(this.state.count);
