@@ -1,5 +1,9 @@
 import React, { Component, useEffect, useState } from "react";
 import "../scss/homepage.scss";
+import Carousel from 'react-elastic-carousel'
+import img1 from "../assets/img-1.jpg";
+import img2 from "../assets/img-2.jpg";
+import img3 from "../assets/img-3.jpg";
 
 export default class homepage extends Component {
 	constructor(props) {
@@ -7,8 +11,10 @@ export default class homepage extends Component {
 		this.state = {
 			count: 0,
 			show: false,
+			num: 1,
 		};
 	}
+
 	
 	increment = () => {
 		this.setState({ count: (this.state.count += 1) });
@@ -16,31 +22,35 @@ export default class homepage extends Component {
 	};
 
 	showMore = () => {
-		this.state.show === true ? (
-			this.setState({ show: false })
-		) : this.setState({show: true})
-	}
-
+		this.state.show === true
+			? this.setState({ show: false })
+			: this.setState({ show: true });
+	};
 
 	changeBg = (color) => {
-		let query = document.querySelector('.body')
-		if(color === "rgb(51, 50, 50)") {
-			query.style.backgroundColor = color
+		let query = document.querySelector(".body");
+		if (color === "rgb(51, 50, 50)") {
+			query.style.backgroundColor = color;
 			query.style.color = "white";
-		}else {
-			query.style.backgroundColor = color
+		} else {
+			query.style.backgroundColor = color;
 			query.style.color = "black";
 		}
-	}
+	};
 
-	
+	changeImg = () => {
+		// this.num < 3 ? this.setState({ num: this.num++ }) : this.setState({ num: 1 });
+		console.log(this.num);
+		console.log("Getting to function")
+	};
+
 	render() {
 		return (
 			<div className="wrapper">
 				{/* INCREMENT NUMBER */}
 				<div className="increment">
-					<button onClick={ this.increment }>Click Me!</button>
-					<h1>{ this.state.count }</h1>
+					<button onClick={this.increment}>Click Me!</button>
+					<h1>{this.state.count}</h1>
 				</div>
 
 				{/* SHOW MORE TEXT BUTTON */}
@@ -53,13 +63,21 @@ export default class homepage extends Component {
 						{this.state.show === false ? (
 							<span>
 								<br />
-								<span className="show" onClick={ this.showMore }>Show More..</span>
+								<span className="show" onClick={this.showMore}>
+									Show More..
+								</span>
 							</span>
 						) : (
 							<span>
 								<br />
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ullam ipsum eveniet ea, voluptas atque minima impedit explicabo possimus quos. Voluptate nihil aliquid consequatur animi? <br />
-								<span className="show" onClick={ this.showMore }>Show Less..</span>
+								Lorem ipsum dolor sit amet, consectetur
+								adipisicing elit. Voluptate ullam ipsum eveniet
+								ea, voluptas atque minima impedit explicabo
+								possimus quos. Voluptate nihil aliquid
+								consequatur animi? <br />
+								<span className="show" onClick={this.showMore}>
+									Show Less..
+								</span>
 							</span>
 						)}
 					</p>
@@ -67,12 +85,35 @@ export default class homepage extends Component {
 
 				<h1 className="text-center">Change Your Background Color!</h1>
 				<div className="colors">
-					<p className="circle red" onClick={ e => this.changeBg("red") }></p>
-					<p className="circle blue" onClick={ e => this.changeBg("blue") }></p>
-					<p className="circle green" onClick={ e => this.changeBg("green") }></p>
-					<p className="circle purple" onClick={ e => this.changeBg("purple") }></p>
-					<p className="circle dark" onClick={ e => this.changeBg("rgb(51, 50, 50)") }></p>
-					<p className="circle white" onClick={ e => this.changeBg("white") }></p>
+					<p
+						className="circle red"
+						onClick={(e) => this.changeBg("red")}
+					></p>
+					<p
+						className="circle blue"
+						onClick={(e) => this.changeBg("blue")}
+					></p>
+					<p
+						className="circle green"
+						onClick={(e) => this.changeBg("green")}
+					></p>
+					<p
+						className="circle purple"
+						onClick={(e) => this.changeBg("purple")}
+					></p>
+					<p
+						className="circle dark"
+						onClick={(e) => this.changeBg("rgb(51, 50, 50)")}
+					></p>
+					<p
+						className="circle white"
+						onClick={(e) => this.changeBg("white")}
+					></p>
+				</div>
+
+				<div className="img-carousel text-center">
+					<h1>{ this.num }</h1>
+					<img onClick={ this.changeImg } src={ this.num === 1 ? img1 : this.num === 2 ? img2 :  img3 } alt="1" />
 				</div>
 			</div>
 		);
