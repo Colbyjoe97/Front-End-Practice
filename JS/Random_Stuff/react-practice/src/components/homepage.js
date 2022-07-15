@@ -40,8 +40,8 @@ export default class homepage extends Component {
 
 	changeImg = () => {
 		this.state.num < 3 ? this.setState({ num: this.state.num += 1 }) : this.setState({ num: 1 })
-		console.log(this.state.num);
 		console.log("Getting to function")
+		console.log(this.state.num);
 	};
 
 	render() {
