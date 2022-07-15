@@ -39,8 +39,8 @@ export default class homepage extends Component {
 	};
 
 	changeImg = () => {
-		// this.num < 3 ? this.setState({ num: this.num++ }) : this.setState({ num: 1 });
-		console.log(this.num);
+		this.state.num < 3 ? this.setState({ num: this.state.num += 1 }) : this.setState({ num: 1 })
+		console.log(this.state.num);
 		console.log("Getting to function")
 	};
 
@@ -113,7 +113,7 @@ export default class homepage extends Component {
 
 				<div className="img-carousel text-center">
 					<h1>{ this.num }</h1>
-					<img onClick={ this.changeImg } src={ this.num === 1 ? img1 : this.num === 2 ? img2 :  img3 } alt="1" />
+					<img onClick={ this.changeImg } src={ this.state.num === 1 ? img1 : this.state.num === 2 ? img2 : this.state.num === 3 ? img3 : img1 } alt="1" />
 				</div>
 			</div>
 		);
