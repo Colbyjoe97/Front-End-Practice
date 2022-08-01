@@ -38,8 +38,18 @@ export default class homepage extends Component {
 		}
 	};
 
-	changeImg = () => {
+	// changeImg = () => {
+	// 	this.state.num < 3 ? this.setState({ num: this.state.num += 1 }) : this.setState({ num: 1 })
+	// 	console.log("Getting to function")
+	// 	console.log(this.state.num);
+	// };
+	nextImg = () => {
 		this.state.num < 3 ? this.setState({ num: this.state.num += 1 }) : this.setState({ num: 1 })
+		console.log("Getting to function")
+		console.log(this.state.num);
+	};
+	prevImg = () => {
+		this.state.num > 1 ? this.setState({ num: this.state.num -= 1 }) : this.setState({ num: 3 })
 		console.log("Getting to function")
 		console.log(this.state.num);
 	};
@@ -112,8 +122,9 @@ export default class homepage extends Component {
 				</div>
 
 				<div className="img-carousel text-center">
-					<h1>{ this.num }</h1>
-					<img onClick={ this.changeImg } src={ this.state.num === 1 ? img1 : this.state.num === 2 ? img2 : this.state.num === 3 ? img3 : img1 } alt="1" />
+					<img className="images" onClick={ this.changeImg } src={ this.state.num === 1 ? img1 : this.state.num === 2 ? img2 : this.state.num === 3 ? img3 : img1 } alt="1" /> <br />
+					<button className="next" onClick={ this.nextImg }>Next</button>
+					<button className="prev" onClick={ this.prevImg }>Previous</button>
 				</div>
 			</div>
 		);
