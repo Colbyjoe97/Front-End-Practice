@@ -72,9 +72,27 @@
 }
 
 // IMAGE CAROUSEL
+.images{
+    height: 350px;
+}
 .img-carousel {
     margin-top: 40px;
 }
 .img-carousel > img {
     width: 550px;
+}
+.next, .prev {
+    padding: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    box-shadow: 3px 4px 2px 2px black;
+    color: white;
+}
+.next {
+    background-color: blue;
+    margin-right: 20px;
+}
+.prev {
+    background-color: red;
 }
